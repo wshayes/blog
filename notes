@@ -1,0 +1,25 @@
+Docker with keycloak using nginx-proxy and wildcard ssl
+
+https://hub.docker.com/r/jwilder/nginx-proxy/
+
+https://hub.docker.com/r/jboss/keycloak/
+Comment by: ak1394
+  See https://github.com/ak1394/keycloak-dockerfiles for setting up keycloak to run behind Nginx proxy.
+  Also, the example of setting up keycloak + nginx + let's encrypt ssl certs (please skip the React Native bit and look at the Docker Compose config). https://medium.com/@ak1394/simple-social-login-for-react-native-apps-71279bf80ffc
+
+
+
+https://hub.docker.com/r/jboss/keycloak-postgres/
+
+
+    docker run --name keycloak \
+        -p 8080:8080 \
+        --network keycloak-net \
+        -e VIRTUAL_HOST=pmi-keycloak.sbvimprover.com \
+        -e VIRTUAL_PORT=8080 \
+        -e KEYCLOAK_USER=admin \
+        -e KEYCLOAK_PASSWORD=sultry1 \
+        -e POSTGRES_PASSWORD=keycloak \
+        -e POSTGRES_PORT_5432_TCP_ADDR=postgresql \
+        -e POSTGRES_PORT_5432_TCP_PORT=5432 \
+        keycloak
