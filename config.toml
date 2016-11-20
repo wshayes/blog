@@ -1,0 +1,39 @@
+baseurl = "http://blog.williamhayes.org/"
+relativeURLs = false
+languageCode = "en-us"
+title = "Through the Haze"
+disqusShortname = "through-the-haze-1"
+paginate = 10
+theme = "hugo-geo"
+
+
+[taxonomies]
+        tag = "tags"
+        tutorial = "tutorials"
+
+[params]
+        showglobe = true
+
+        analytics = "code-here"
+
+        github = "https://github.com/wshayes"
+        twitter = "https://twitter.com/williamhayes"
+        linkedin = "https://www.linkedin.com/in/williamshayes"
+        email = "william.s.hayes@gmail.com"
+
+        profilepic = "img/headshot.jpg"
+
+        title = "William Hayes, PhD"
+        subtitle = "Personal Musings"
+
+        [[params.navlinks]]
+        name = "About"
+        url = "about"
+
+        [[params.navlinks]]
+        name = "Blog"
+        url = ""
+
+#        [[params.navlinks]]
+#        name = "Tutorials"
+#        url = "tutorial/"
